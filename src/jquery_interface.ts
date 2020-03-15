@@ -1,3 +1,3 @@
 interface JQuery {
-  slider(options: any): any;
+  donutChart(options: any): any;
 }

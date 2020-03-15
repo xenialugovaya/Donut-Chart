@@ -5,9 +5,7 @@
   "main": "sliderPlugin.js",
   "scripts": {
     "lint": "tsc -w && eslint 'src/*.{js,ts,tsx}'  --fix",
-    "prettier": "prettier --write 'src/*.{js,ts,tsx}'",
-    "debug": "eslint --debug",
-    "build": "webpack --config webpack.dev.config.js",
+    "build": "webpack --config webpack.dev.config.js --mode production",
     "start": "webpack-dev-server --config webpack.dev.config.js",
     "test": "karma start karma.conf.js"
   },

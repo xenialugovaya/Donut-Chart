@@ -53,7 +53,7 @@ module.exports = {
  
   
   output: {
-    filename: 'sliderApp.js',
+    filename: 'donutChart.js',
     path: path.resolve(__dirname, './dist'),
   },
   devServer: {
