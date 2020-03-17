@@ -34,6 +34,7 @@ Demo page <a href="https://xenialugovaya.github.io/Donut-Chart/dist/">see demo</
 <p>To set percents instead of amount</p>
 <pre>
 <code>amountPrc: ['20%', '30%', '50%']</code>
+
 </pre>
 <p>To set colors instead of gradients</p>
 <pre>
