@@ -4,9 +4,27 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(href='assets/css/main.css', rel='stylesheet', type='text/css')
+    script(src='https://code.jquery.com/jquery-3.1.0.js')
+    script(src="donut-chart.js")
+
     
   body
-  script(src="donutChart.js")
+    h1 Demo Donut chart
+    <div class='chart'></div>
+  script.
+    $(() => {
+       $('.chart').donutChart({
+         chartOptions: ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
+          amountAbs: [520, 260, 260],
+          gradients: [
+            ['#FFE39C', '#FFBA9C'],
+            ['#6FCF97', '#66D2EA'],
+            ['#BC9CFF', '#8BA4F9'],
+            ['#919191', '#3D4975'],
+            ['#BC9CFF', '#8BA4F9'],
+          ]
+       });
+    });
   
 
   

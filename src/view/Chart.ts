@@ -96,6 +96,11 @@ class Chart {
     if (parent.parentElement) {
       parent.parentElement.append(this._textGroup);
       this._textGroup.style.position = 'absolute';
+      this._textGroup.style.margin = 'auto';
+      this._textGroup.style.top = '0';
+      this._textGroup.style.bottom = '0';
+      this._textGroup.style.left = '0';
+      this._textGroup.style.right = '0';
     }
     const textAmount = document.createElement('div');
     textAmount.classList.add('chart-number');

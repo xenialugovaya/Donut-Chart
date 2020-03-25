@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   watch: true,
-  entry: ['./src/index', './src/demo/demo'],
+  entry: './src/index',
   devtool: 'inline-source-map',
   mode: 'development',
   module: {
@@ -28,14 +28,10 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           'style-loader',
           MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
           'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader',
-          
+          'sass-loader',          
         ],
       },
       {
@@ -48,13 +44,15 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
-
   },
- 
   
   output: {
-    filename: 'donutChart.js',
+    filename: 'donut-chart.js',
     path: path.resolve(__dirname, './dist'),
+    library: 'donutChart',
+  },
+  externals: {
+    jquery: 'jQuery'
   },
   devServer: {
     contentBase: path.join(__dirname, './dist'),
@@ -78,7 +76,5 @@ module.exports = {
       filename: `assets/css/main.css`,
     }),
   ],
-  
-
 
 };
