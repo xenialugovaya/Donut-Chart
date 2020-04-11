@@ -31,7 +31,6 @@ class List {
       bul.style.height = '10px';
       bul.style.width = '10px';
       bul.style.left = '-15px';
-      bul.style.top = '4px';
       if (colors) bul.style.background = colors[indx];
       if (gradients)
         bul.style.background = `linear-gradient(180deg, ${gradients[indx][0]} 0%, ${gradients[indx][1]} 100%)`;

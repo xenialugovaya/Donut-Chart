@@ -48,7 +48,7 @@ class Arc {
 
   setGradient(gradient: string[], defs: SVGElement): void {
     const linearGradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
-    const id = gradient.toString();
+    const id = gradient.join('').substr(1);
     linearGradient.id = id;
     this._arc.setAttribute('stroke', `url(#${id})`);
     linearGradient.setAttribute('x1', '60');
