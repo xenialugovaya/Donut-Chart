@@ -92,20 +92,18 @@ class Chart {
   }
 
   setText(parent: SVGElement): void {
-    this._textGroup.classList.add('chart-text');
+    this._textGroup.classList.add('chart__text');
     if (parent.parentElement) {
       parent.parentElement.append(this._textGroup);
       this._textGroup.style.position = 'absolute';
-      this._textGroup.style.margin = 'auto';
-      this._textGroup.style.top = '0';
-      this._textGroup.style.bottom = '0';
-      this._textGroup.style.left = '0';
-      this._textGroup.style.right = '0';
+      this._textGroup.style.top = '50%';
+      this._textGroup.style.left = '50%';
+      this._textGroup.style.transform = 'translate(-50%, -50%)';
     }
     const textAmount = document.createElement('div');
-    textAmount.classList.add('chart-number');
+    textAmount.classList.add('chart__number');
     const textLabel = document.createElement('div');
-    textLabel.classList.add('chart-label');
+    textLabel.classList.add('chart__label');
     this._text = [textAmount, textLabel];
     this._text.forEach(text => {
       this._textGroup.append(text);

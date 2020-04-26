@@ -7,9 +7,10 @@ class SvgGroup {
     this._parent = parent;
     const xmlns = 'http://www.w3.org/2000/svg';
     this._svgElem = document.createElementNS(xmlns, 'svg');
+    this._svgElem.classList.add('chart__svg-group');
     this._parent.append(this._svgElem);
     this._g = document.createElementNS(xmlns, 'g');
-    this._g.classList.add('chart-circle');
+    this._g.classList.add('chart__circle');
     this._svgElem.append(this._g);
     this.setSVGAttributes();
     this.setGAttributes();

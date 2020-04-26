@@ -2,30 +2,28 @@
     position: relative;
     width: 120px;
     height: 120px;
-   circle:hover{
+   &__arc:hover{
       stroke-width: 8;
+      cursor: pointer;
    }
-}
-svg{
+   &__svg-group{
     transform: scaleX(-1); 
-}
+  }
 
-.chart-text{
+  &__text{
     width: 60px;
     height: 40px;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    .chart-number{
-        font-size: 24px;
-    }
-    .chart-label{
-        font-size: 12px;
-    }
+  }
+  &__number{
+    font-size: 24px;
+  }
+  &__label{
+    font-size: 12px;
+  }
 }
 
-.chart_options {
-    span {
-      top: 3px;
-    }
-  }
+
+

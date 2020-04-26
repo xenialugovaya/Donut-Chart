@@ -7,6 +7,7 @@ class Arc {
     this._parent = parent;
     const xmlns = 'http://www.w3.org/2000/svg';
     this._arc = document.createElementNS(xmlns, 'circle');
+    this._arc.classList.add('chart__arc');
     this._parent.append(this._arc);
     this._arcLength = 0;
   }
