@@ -47,6 +47,6 @@
   },
   "dependencies": {
     "@types/jquery": "^3.3.32",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
