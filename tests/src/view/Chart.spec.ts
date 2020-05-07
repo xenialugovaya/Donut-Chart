@@ -27,17 +27,12 @@ describe('test chart view', function() {
     }
   });
 
-  it('should set coverage for arcs in percents', function() {
-    const coverage = chart.arcs[0].elem.getAttribute('stroke-dasharray');
-    expect(coverage).toEqual('30%');
-  });
-
   it('should set color for arcs', function() {
     const color = chart.arcs[0].elem.getAttribute('stroke');
     expect(color).toEqual('blue');
   });
 
   it('should add list of options to dom', function() {
-    expect(document.querySelector('ul')).toHaveClass('chart_options');
+    expect(document.querySelector('ul')).toHaveClass('chart__options');
   });
 });

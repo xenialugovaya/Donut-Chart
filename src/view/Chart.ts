@@ -95,10 +95,6 @@ class Chart {
     this._textGroup.classList.add('chart__text');
     if (parent.parentElement) {
       parent.parentElement.append(this._textGroup);
-      this._textGroup.style.position = 'absolute';
-      this._textGroup.style.top = '50%';
-      this._textGroup.style.left = '50%';
-      this._textGroup.style.transform = 'translate(-50%, -50%)';
     }
     const textAmount = document.createElement('div');
     textAmount.classList.add('chart__number');
